@@ -29,7 +29,7 @@ https://github.com/matheusfontinele/expedia
 - PATH: Edit variable and add the new Java path value
   Example: %JAVA_HOME%\bin
 
-To verify if the java is installed or not, just open CMD and execute the instruction below:
+To check if the java is installed or not, just open CMD and execute the statement below:
 ```sh
 java -version
 ```
@@ -40,7 +40,7 @@ Java(TM) SE Runtime Environment (build 15.0.2+7-27)
 Java HotSpot(TM) 64-Bit Server VM (build 15.0.2+7-27, mixed mode, sharing)
 ```
 
-[Maven](https://maven.apache.org/download.cgi) after the unzip, it will be necessary to add the maven PATH into environment variable PATH.
+[Maven](https://maven.apache.org/download.cgi) after unziping it, you will need to add the maven PATH into environment variable PATH.
 
 Example: C:\Program Files\apache-maven-3.6.3\bin
 
