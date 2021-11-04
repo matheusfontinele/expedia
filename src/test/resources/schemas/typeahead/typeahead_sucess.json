@@ -1,0 +1,270 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/object1635918748.json",
+  "title": "Root",
+  "type": "object",
+  "required": [
+    "q",
+    "rid",
+    "rc",
+    "sr"
+  ],
+  "properties": {
+    "q": {
+      "$id": "#root/q",
+      "title": "Q",
+      "type": "string",
+      "default": "",
+      "pattern": "^.*$"
+    },
+    "rid": {
+      "$id": "#root/rid",
+      "title": "Rid",
+      "type": "string",
+      "default": "",
+      "pattern": "^.*$"
+    },
+    "rc": {
+      "$id": "#root/rc",
+      "title": "Rc",
+      "type": "string",
+      "default": "",
+      "pattern": "^.*$"
+    },
+    "sr": {
+      "$id": "#root/sr",
+      "title": "Sr",
+      "type": "array",
+      "default": [],
+      "items":{
+        "$id": "#root/sr/items",
+        "title": "Items",
+        "type": "object",
+        "required": [
+          "@type",
+          "index",
+          "gaiaId",
+          "type",
+          "regionNames",
+          "essId",
+          "coordinates",
+          "hierarchyInfo"
+        ],
+        "properties": {
+          "@type": {
+            "$id": "#root/sr/items/@type",
+            "title": "@type",
+            "type": "string",
+            "default": "",
+            "pattern": "^.*$"
+          },
+          "index": {
+            "$id": "#root/sr/items/index",
+            "title": "Index",
+            "type": "string",
+            "default": "",
+            "pattern": "^.*$"
+          },
+          "gaiaId": {
+            "$id": "#root/sr/items/gaiaId",
+            "title": "Gaiaid",
+            "type": "string",
+            "default": "",
+            "pattern": "^.*$"
+          },
+          "type": {
+            "$id": "#root/sr/items/type",
+            "title": "Type",
+            "type": "string",
+            "default": "",
+            "pattern": "^.*$"
+          },
+          "regionNames": {
+            "$id": "#root/sr/items/regionNames",
+            "title": "Regionnames",
+            "type": "object",
+            "required": [
+              "fullName",
+              "shortName",
+              "displayName",
+              "lastSearchName"
+            ],
+            "properties": {
+              "fullName": {
+                "$id": "#root/sr/items/regionNames/fullName",
+                "title": "Fullname",
+                "type": "string",
+                "default": "",
+                "pattern": "^.*$"
+              },
+              "shortName": {
+                "$id": "#root/sr/items/regionNames/shortName",
+                "title": "Shortname",
+                "type": "string",
+                "default": "",
+                "pattern": "^.*$"
+              },
+              "displayName": {
+                "$id": "#root/sr/items/regionNames/displayName",
+                "title": "Displayname",
+                "type": "string",
+                "default": "",
+                "pattern": "^.*$"
+              },
+              "lastSearchName": {
+                "$id": "#root/sr/items/regionNames/lastSearchName",
+                "title": "Lastsearchname",
+                "type": "string",
+                "default": "",
+                "pattern": "^.*$"
+              }
+            }
+          }
+        ,
+          "essId": {
+            "$id": "#root/sr/items/essId",
+            "title": "Essid",
+            "type": "object",
+            "required": [
+              "sourceName",
+              "sourceId"
+            ],
+            "properties": {
+              "sourceName": {
+                "$id": "#root/sr/items/essId/sourceName",
+                "title": "Sourcename",
+                "type": "string",
+                "default": "",
+                "pattern": "^.*$"
+              },
+              "sourceId": {
+                "$id": "#root/sr/items/essId/sourceId",
+                "title": "Sourceid",
+                "type": "string",
+                "default": "",
+                "pattern": "^.*$"
+              }
+            }
+          }
+        ,
+          "coordinates": {
+            "$id": "#root/sr/items/coordinates",
+            "title": "Coordinates",
+            "type": "object",
+            "required": [
+              "lat",
+              "long"
+            ],
+            "properties": {
+              "lat": {
+                "$id": "#root/sr/items/coordinates/lat",
+                "title": "Lat",
+                "type": "string",
+                "default": "",
+                "pattern": "^.*$"
+              },
+              "long": {
+                "$id": "#root/sr/items/coordinates/long",
+                "title": "Long",
+                "type": "string",
+                "default": "",
+                "pattern": "^.*$"
+              }
+            }
+          }
+        ,
+          "hierarchyInfo": {
+            "$id": "#root/sr/items/hierarchyInfo",
+            "title": "Hierarchyinfo",
+            "type": "object",
+            "required": [
+              "country",
+              "airport"
+            ],
+            "properties": {
+              "country": {
+                "$id": "#root/sr/items/hierarchyInfo/country",
+                "title": "Country",
+                "type": "object",
+                "required": [
+                  "name",
+                  "isoCode2",
+                  "isoCode3"
+                ],
+                "properties": {
+                  "name": {
+                    "$id": "#root/sr/items/hierarchyInfo/country/name",
+                    "title": "Name",
+                    "type": "string",
+                    "default": "",
+                    "pattern": "^.*$"
+                  },
+                  "isoCode2": {
+                    "$id": "#root/sr/items/hierarchyInfo/country/isoCode2",
+                    "title": "Isocode2",
+                    "type": "string",
+                    "default": "",
+                    "pattern": "^.*$"
+                  },
+                  "isoCode3": {
+                    "$id": "#root/sr/items/hierarchyInfo/country/isoCode3",
+                    "title": "Isocode3",
+                    "type": "string",
+                    "default": "",
+                    "pattern": "^.*$"
+                  }
+                }
+              }
+            ,
+              "airport": {
+                "$id": "#root/sr/items/hierarchyInfo/airport",
+                "title": "Airport",
+                "type": "object",
+                "required": [
+                  "airportCode",
+                  "airportId",
+                  "metrocode",
+                  "multicity"
+                ],
+                "properties": {
+                  "airportCode": {
+                    "$id": "#root/sr/items/hierarchyInfo/airport/airportCode",
+                    "title": "Airportcode",
+                    "type": "string",
+                    "default": "",
+                    "pattern": "^.*$"
+                  },
+                  "airportId": {
+                    "$id": "#root/sr/items/hierarchyInfo/airport/airportId",
+                    "title": "Airportid",
+                    "type": "string",
+                    "default": "",
+                    "pattern": "^.*$"
+                  },
+                  "metrocode": {
+                    "$id": "#root/sr/items/hierarchyInfo/airport/metrocode",
+                    "title": "Metrocode",
+                    "type": "string",
+                    "default": "",
+                    "pattern": "^.*$"
+                  },
+                  "multicity": {
+                    "$id": "#root/sr/items/hierarchyInfo/airport/multicity",
+                    "title": "Multicity",
+                    "type": "string",
+                    "default": "",
+                    "pattern": "^.*$"
+                  }
+                }
+              }
+
+            }
+          }
+
+        }
+      }
+
+    }
+  }
+}
