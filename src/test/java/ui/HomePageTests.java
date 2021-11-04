@@ -14,7 +14,7 @@ import java.time.LocalDate;
 @Listeners(TestListener.class)
 public class HomePageTests {
 
-    private String webSite = "https://www.expedia.com";
+    private final String webSite = "https://www.expedia.com";
 
     WebDriver driver;
 
@@ -23,7 +23,7 @@ public class HomePageTests {
         driver  = new ChromeDriver();
         driver.manage().window().maximize();
 
-        driver.get("https://www.expedia.com");
+        driver.get(webSite);
     }
 
     @AfterMethod
@@ -39,6 +39,7 @@ public class HomePageTests {
 
         SearchResultPage searchResultPage = homePage.searchStay("Walt Disney World", localDate, localDate.plusDays(28));
 
+        //How the expedia check if the user it is a robot or not, the assertition it is not possible
     }
 
     @Test
@@ -54,4 +55,16 @@ public class HomePageTests {
         Assertions.assertThat(homePage.getCheckoutError()).isEqualTo(expectedMessage);
     }
 
+    @Test
+    public void searchForStaysWithInputGoingToBlank() {
+        String expectedMessage = "Please select a destination";
+    	
+    	HomePage homePage = new HomePage(driver);
+
+        LocalDate localDate = LocalDate.now();
+
+        SearchResultPage searchResultPage = homePage.searchStay("", localDate, localDate.plusDays(28));
+
+        Assertions.assertThat(homePage.getGointToInputError()).isEqualTo(expectedMessage);
+    }
 }

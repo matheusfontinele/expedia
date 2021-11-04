@@ -3,19 +3,26 @@
 ## Intro
 
 Java version: Java 15
+Chrome version: 95.0.4638.54
 
-The project was created with the dependencies below:
-- Selenium WebDriver
-- TestNG
-- Rest Assured
-- AssertJ
+The project has been created with the following dependencies:
+- UI Tests
+    - Selenium WebDrive
+    - TestNG
+    - AssertJ
+- API Tests
+    - Rest Assured
+    - Cucumber + Parallelism
+    - PicoContainer (Dependency Injection)
+    - AssertJ
+    - TestNG
 
-## Repository
+## Project Repository
 https://github.com/matheusfontinele/expedia
 
 ## Installation
 
-[Java JDK 15](https://www.oracle.com/java/technologies/javase/jdk15-archive-downloads.html) after the installation, it will be necessary the to create/edit the following environment variables:
+[Java JDK 15](https://www.oracle.com/java/technologies/javase/jdk15-archive-downloads.html) after the installation, you will need to create/edit the following environment variables:
 - JAVA_HOME: JDK installed path
   
   Example: C://(USER)/Program Files/Java/(JDK)

@@ -16,6 +16,7 @@ public class HomePage {
     private By staysSpan = By.xpath("//span[text()='Stays']");
     private By goingToButton = By.cssSelector("#location-field-destination-menu > div.uitk-field.has-floatedLabel-label.has-icon.has-no-placeholder > button");
     private By goingToInput = By.id("location-field-destination");
+    private By goingToInputError = By.id("location-field-destination-input-error");
     private By resultOptionButtons = By.xpath("//li[@class='uitk-typeahead-result-item']/button");
     private By checkInButton = By.xpath("//button[@data-stid='open-date-picker' and @data-name='d1']");
     private By checkOutError = By.id("d2-error");
@@ -26,11 +27,13 @@ public class HomePage {
     }
 
     public void typeInputGoingTo(String text) {
+    	if(!text.isEmpty()) {
         driver.findElement(goingToButton).click();
         driver.findElement(goingToInput).sendKeys(text);
         List<WebElement> listOptions = driver.findElements(resultOptionButtons);
         WebElement lastOption = listOptions.get(listOptions.size() - 1);
         lastOption.click();
+    	}
     }
 
     public DatePicker clickCheckInButton() {
@@ -46,6 +49,10 @@ public class HomePage {
 
     public String getCheckoutError() {
         return driver.findElement(checkOutError).getText();
+    }
+    
+    public String getGointToInputError() {
+    	return driver.findElement(goingToInputError).getText();
     }
 
     public SearchResultPage searchStay(String goingTo, LocalDate checkIn, LocalDate checkOut) {
